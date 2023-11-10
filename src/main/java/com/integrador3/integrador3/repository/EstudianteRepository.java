@@ -23,7 +23,7 @@ public interface EstudianteRepository extends JpaRepository<Estudiante, String> 
         @Query("SELECT ec.estudiante " +
                 "FROM EstudianteCarrera ec " +
                 "JOIN ec.estudiante e " +
-                "JOIN c.carrera " +
+                "JOIN ec.carrera c " +
                 "WHERE e.ciudad = :carrera " +
                 "AND c.nombre = :ciudad ")
 
